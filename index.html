@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<style type="text/css">
+		
+		body {
+			font-family: arial, helvetica, sans-serif;
+			font-size: 75%;
+		}
+		
+		.timePicker {
+			border: 1px solid gray;
+			overflow-y: scroll;
+			height: 120px;
+			width: 180px;
+			position: absolute;
+			background-color: #fff;
+		}
+		
+		.timePicker ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+		
+		.timePicker ul li p {
+			padding: 3px;
+			margin: 0;
+		}
+	
+		.timePicker ul li:hover, .timePicker-selected {
+			background-color: gray;
+			color: #fff;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="jquery-TimePicker.js"></script>
+	<script type="text/javascript">
+	
+	$(function() {
+		$("#startTime, #endTime").timePicker();
+	});
+
+	</script>
+</head>
+<body>
+	<div><input type="text" id="startTime"></input></div>
+	<div><input type="text" id="endTime"></input></div>
+</body>
+</html>
