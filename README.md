@@ -3,6 +3,8 @@ Introduction
 
 The jQuery TimePicker is a simple plug-in that allows the user to enter a time or optionally select a time of day from a list.
 
+![Time Picker](https://github.com/pagebrooks/jquery-timepicker/raw/master/docs/images/screenshot.png)
+
 Usage
 =====
 
