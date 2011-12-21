@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>jquery-timepicker</id>
+    <version>1.0.0</version>
+    <authors>Page Brooks</authors>
+    <owners>Page Brooks</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/pagebrooks/jquery-timepicker</projectUrl>
+    <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A simple jQuery plug-in that allows users to enter a time of day and optionally select a time from a drop down list.</description>
+    <releaseNotes>A simple jQuery plug-in that allows users to enter a time of day and optionally select a time from a drop down list.</releaseNotes>
+    <tags>jQuery JavaScript plugins ASP.NET</tags>
+	<dependencies>
+		<dependency id="jQuery" version="1.7.1" />
+	</dependencies>
+    <frameworkAssemblies />
+  </metadata>
+  <files>
+    <file src="jquery-TimePicker-1.0.0.js" target="content\scripts\jquery-TimePicker-1.0.0.js" />
+  </files>  
+</package>

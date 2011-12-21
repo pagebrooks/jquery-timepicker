@@ -1,0 +1,6 @@
+*.user
+*.dotCover
+\bin
+\obj
+*.suo
+_ReSharper.*
