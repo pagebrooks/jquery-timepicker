@@ -10,6 +10,9 @@ Usage
 
 Using standard jQuery syntax, simply select the text input elements that will become time picker controls.  In the example
 below, the startTime element is transformed into a time picker control when the document loads.
+
+CSS
+
 ```
 <style type="text/css">
 		
@@ -39,11 +42,18 @@ below, the startTime element is transformed into a time picker control when the 
 	}
 		
 </style>
+```
 
+HTML
 
 ```
+<script src="Scripts/jquery-TimePicker-1.0.0.js" type="text/javascript"></script>
+...
+...
 <input type="text" id="startTime"></input>
 ```
+
+SCRIPT
 
 ```
 <script type="text/javascript">
