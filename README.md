@@ -5,6 +5,17 @@ The jQuery TimePicker is a simple plug-in that allows the user to enter a time o
 
 ![Time Picker](https://github.com/pagebrooks/jquery-timepicker/raw/master/docs/images/screenshot.png)
 
+Installation
+============
+
+The jQuery TimePicker is available as a [Nuget](https://nuget.org) package.
+
+https://nuget.org/packages/jquery-timepicker
+
+```
+PM> Install-Package jquery-timepicker
+```
+
 Usage
 =====
 
