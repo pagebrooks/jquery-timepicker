@@ -74,7 +74,7 @@ jQuery.fn.extend({
 		  };
 
 		return this.each(function() {
-			var i, newItem, pickerList, x, _i, _len, _ref;
+			var i, pickerList, x, _i, _len, _ref;
 			
 			i = $(this);
 			
@@ -129,14 +129,46 @@ jQuery.fn.extend({
 				return;
 			});
 			
-			newItem = $("<div class=\"timePicker\"><ul></ul></div>");
-			newItem.hide();
+			var newItemList = $("<ul></ul>");
+			newItemList.css({
+				'list-style-type': 'none',
+				'padding': '0',
+				'margin': '0'
+			});
+			var newItem = $("<div class=\"timePicker\"></div>");
+			newItem.css({
+				'overflow-y': 'scroll',
+				'height': '120px',
+				'width': '180px',
+				'background-color': '#fff',
+				'border': '1px solid gray',
+				'position': 'absolute',
+				'display': 'none'
+			});
+			newItem.append(newItemList);
 			i.after(newItem);
 			pickerList = newItem.children("ul");
 			_ref = getTimesOfDay();
 			
+			var pTagStyle = { 'padding': '3px', 'margin': '0'};
+			
 			for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-				pickerList.append("<li><p>" + _ref[_i] + "</p></li>");
+				var listItemContents = $("<p>" + _ref[_i] + "</p>").css(pTagStyle);
+				var listItem = $("<li></li>");
+				listItem.hover(function() {
+					$(this).css({ 			
+						'background-color': 'gray',
+						'color': '#fff'
+					});
+				},
+				function() {
+					$(this).css({ 			
+						'background-color': '#fff',
+						'color': '#000'
+					});
+				});
+				listItem.append(listItemContents);
+				pickerList.append(listItem);
 			}
 			
 			pickerList.children("li").click(function() {

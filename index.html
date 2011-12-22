@@ -8,28 +8,8 @@
 			font-family: arial, helvetica, sans-serif;
 			font-size: 75%;
 		}
-		
-		.timePicker {
-			border: 1px solid gray;
-			overflow-y: scroll;
-			height: 120px;
-			width: 180px;
-			position: absolute;
-			background-color: #fff;
-		}
-		
-		.timePicker ul {
-			list-style-type: none;
-			padding: 0;
-			margin: 0;
-		}
-		
-		.timePicker ul li p {
-			padding: 3px;
-			margin: 0;
-		}
 	
-		.timePicker ul li:hover, .timePicker-selected {
+		.timePicker-selected {
 			background-color: gray;
 			color: #fff;
 		}
@@ -39,7 +19,9 @@
 	<script type="text/javascript">
 	
 	$(function() {
+		
 		$("#startTime, #endTime").timePicker();
+		
 	});
 
 	</script>
