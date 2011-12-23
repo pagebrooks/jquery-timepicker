@@ -64,10 +64,10 @@ jQuery.fn.extend({
 			  var li;
 			  li = $(this);
 			  if (li.text().toLowerCase() === currentValue) {
-				li.addClass("timePicker-selected");
+				li.addClass("timePicker-selected").css({"color": "#fff", "background-color": "gray"});
 				return currentList.scrollTop(li.position().top - 60);
 			  } else {
-				return li.removeClass("timePicker-selected");
+				return li.removeClass("timePicker-selected").css({"background-color": "#fff"});
 			  }
 			});
 			return $(".timePicker").not(except).hide();
@@ -95,13 +95,13 @@ jQuery.fn.extend({
 					$(".timePicker").hide();
 					return
 				} else if (e.which === 40) {
-					li = i.next().find("li.timePicker-selected").removeClass("timePicker-selected");
+					li = i.next().find("li.timePicker-selected").removeClass("timePicker-selected").css({"color": "#000", "background-color": "#fff"});
 					if (li.next().length === 0) {
-						i.next().find("li:first-child").addClass("timePicker-selected");
+						i.next().find("li:first-child").addClass("timePicker-selected").css({"color": "#fff", "background-color": "gray"});
 						i.next().scrollTop(0);
 						return;
 					} else {
-						li.next().addClass("timePicker-selected");
+						li.next().addClass("timePicker-selected").css({"color": "#fff", "background-color": "gray"});
 					}
 					
 					if (li.position().top > 60 - li.height()) {
@@ -110,13 +110,13 @@ jQuery.fn.extend({
 					}
 				} 
 				else if (e.which === 38) {
-					li = i.next().find("li.timePicker-selected").removeClass("timePicker-selected");
+					li = i.next().find("li.timePicker-selected").removeClass("timePicker-selected").css({"color": "#000", "background-color": "#fff"});
 					if (li.prev().length === 0) {
-						i.next().find("li:last-child").addClass("timePicker-selected");
+						i.next().find("li:last-child").addClass("timePicker-selected").css({"color": "#fff", "background-color": "gray"});
 						i.next().scrollTop(i.next().find("li:last-child").position().top);
 						return;
 					} else {
-						li.prev().addClass("timePicker-selected");
+						li.prev().addClass("timePicker-selected").css({"color": "#fff", "background-color": "gray"});;
 					}
 					
 					if (li.position().top < 60 + li.height()) {
@@ -128,6 +128,7 @@ jQuery.fn.extend({
 				options.formatValue(i);
 				return;
 			});
+			
 			
 			var newItemList = $("<ul></ul>");
 			newItemList.css({
