@@ -51,18 +51,18 @@ jQuery.fn.extend({
 			return times;
 		};
 	
-		$(document).click(function(e) {
-			return $(".timePicker").hide();
+		jQuery(document).click(function(e) {
+			return jQuery(".timePicker").hide();
 		});
 		
 		var hideTimePickers = function(except) {
 			var currentList, currentValue, listItems;
-			currentList = $(except);
+			currentList = jQuery(except);
 			currentValue = currentList.prev().val().toLowerCase();
 			listItems = currentList.show().find("li");
 			listItems.each(function() {
 			  var li;
-			  li = $(this);
+			  li = jQuery(this);
 			  if (li.text().toLowerCase() === currentValue) {
 				li.addClass("timePicker-selected");
 				return currentList.scrollTop(li.position().top - 60);
@@ -70,13 +70,13 @@ jQuery.fn.extend({
 				return li.removeClass("timePicker-selected");
 			  }
 			});
-			return $(".timePicker").not(except).hide();
+			return jQuery(".timePicker").not(except).hide();
 		  };
 
 		return this.each(function() {
 			var i, newItem, pickerList, x, _i, _len, _ref;
 			
-			i = $(this);
+			i = jQuery(this);
 			
 			i.focus(function(e) {
 			  return hideTimePickers(i.next());
@@ -92,7 +92,7 @@ jQuery.fn.extend({
 					return false;
 				}	 
 				else if (e.which !== 38 && e.which !== 40) {
-					$(".timePicker").hide();
+					jQuery(".timePicker").hide();
 					return
 				} else if (e.which === 40) {
 					li = i.next().find("li.timePicker-selected").removeClass("timePicker-selected");
@@ -129,7 +129,7 @@ jQuery.fn.extend({
 				return;
 			});
 			
-			newItem = $("<div class=\"timePicker\"><ul></ul></div>");
+			newItem = jQuery("<div class=\"timePicker\"><ul></ul></div>");
 			newItem.hide();
 			i.after(newItem);
 			pickerList = newItem.children("ul");
@@ -140,7 +140,7 @@ jQuery.fn.extend({
 			}
 			
 			pickerList.children("li").click(function() {
-				var child = $(this);
+				var child = jQuery(this);
 				i.val(child.text());
 				child.parent().parent().hide();
 				return;
